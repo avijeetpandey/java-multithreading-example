@@ -55,3 +55,6 @@ By default , the application will not stop as long as atleast one thread running
 Thread thread = new Thread(()-> {});
 thread.interupt(); // closes the thread
 ```
+
+### Daemon threads
+Background threads that do not prevent the application from exiting if the main thread terminates.
