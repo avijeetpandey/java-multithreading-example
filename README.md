@@ -13,3 +13,30 @@ A thread is the smallest unit of execution, it represents the sequence of instru
 - WAITING
 - TIME_WAITING
 - TERMINATED
+
+### Thread creation
+There are basically two ways of thread creation , both of them are mentioned below
+
+```java
+Thread thread = new Thread(()-> {
+    System.out.println("Hello from " + Thread.currentThread().getName());
+});
+```
+
+
+```java
+public class ThreadCreationTypeTwo {
+    public static void main(String[] args) {
+        Thread thread = new NewThread();
+        thread.start();
+    }
+
+
+    private static class NewThread extends Thread {
+        @Override
+        public void run() {
+            System.out.println("Hello from " + this.getName());
+        }
+    }
+}
+```
