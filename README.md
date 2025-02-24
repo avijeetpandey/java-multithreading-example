@@ -40,3 +40,18 @@ public class ThreadCreationTypeTwo {
     }
 }
 ```
+
+## Thread Co-ordination
+Running threads basically consumes resources like
+- Memory and kernel resources
+- CPU cycles and cache memory
+
+also if a thread is finished with the tasks , but the application is still running we want to cleanup the threads resources.
+
+##### Note:
+By default , the application will not stop as long as atleast one thread running even if the main thread is stopped.
+
+```java
+Thread thread = new Thread(()-> {});
+thread.interupt(); // closes the thread
+```
